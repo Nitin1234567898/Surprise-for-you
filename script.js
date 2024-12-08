@@ -11,11 +11,13 @@ function moveNoButton() {
     noButton.style.left = `${x}px`;
     noButton.style.top = `${y}px`;
 }
-noButton.addEventListener('mouseover', moveNoButton); 
+
+noButton.addEventListener('mouseover', moveNoButton);
+
+// For mobile, use 'touchstart' event to move the "No" button
 noButton.addEventListener('touchstart', (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     setTimeout(moveNoButton, 100); 
-});
 
 // Show the final screen when "Yes" is clicked
 yesButton.addEventListener('click', () => {
